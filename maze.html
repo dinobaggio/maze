@@ -1,6 +1,4 @@
 
-
-
 <script>
     maze(25);
 
@@ -8,12 +6,11 @@
             let batasan = Math.ceil(ukuran/4);
             for (let i=0; i< ukuran;i++) {
                 let tembok = '@';
-                let k = '';
                 for (let j = 0; j < ukuran; j++) {
                     if (i % 2 != 0) {
                         if (j == ukuran -1) {
                             tembok += '@';
-                            continue
+                            continue;
                         }
                         tembok += ' ';
                         continue;
