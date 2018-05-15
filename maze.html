@@ -1,0 +1,49 @@
+
+
+
+<script>
+    maze(25);
+
+    function maze (ukuran) {
+            let batasan = Math.ceil(ukuran/4);
+            for (let i=0; i< ukuran;i++) {
+                let tembok = '@';
+                let k = '';
+                for (let j = 0; j < ukuran; j++) {
+                    if (i % 2 != 0) {
+                        if (j == ukuran -1) {
+                            tembok += '@';
+                            continue
+                        }
+                        tembok += ' ';
+                        continue;
+                    } else {
+                        if (i % 4 == 0) {
+                            if (j == 0) {
+                                tembok += ' ';
+                                continue;
+                            }
+                        } else {
+                            if (j == ukuran -2 ) {
+                                tembok += ' ';
+                                continue;
+                            }
+                        }
+
+                        if (i == 0) {
+                            tembok += '@';
+                            continue;
+                        }
+                        if (i == ukuran - 1) {
+                            tembok += '@';
+                            continue;
+                        }
+                    }
+
+
+                    tembok += '@';
+                }
+                console.log(tembok + ' ' + k);
+            }
+        }
+</script>
